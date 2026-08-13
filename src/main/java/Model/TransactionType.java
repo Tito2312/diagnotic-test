@@ -1,5 +1,5 @@
 package Model;
 
-public enum TYPE_TRANSACTION {
+public enum TransactionType {
     WIN, BET;
 }
