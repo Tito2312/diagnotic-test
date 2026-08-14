@@ -5,13 +5,15 @@ import Model.transaction;
 
 public class transactionService {
 
-    public transaction createTransaction (String id, TransactionType type, double amount) {
-        transaction newTransaction;
+    walletService walletService = new walletService();
 
-        if (amount <= 0) {
-            throw new IllegalArgumentException("El monto debe ser positivo");
-        }else{
-            newTransaction = new transaction(id, type, amount);
+    public transaction createTransaction (String id, TransactionType type, double amount) {
+        transaction newTransaction = new transaction(id, type, amount);
+
+        switch (type) {
+            case BET -> betTransaction(newTransaction);
+            case WIN ->  winTransaction(newTransaction);
+            default -> throw  new IllegalArgumentException("Unknown transaction type");
         }
 
         return newTransaction;
