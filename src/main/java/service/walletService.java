@@ -1,7 +1,6 @@
-package Service;
+package service;
 
-import Model.transaction;
-import Model.wallet;
+import model.wallet;
 
 import java.util.UUID;
 

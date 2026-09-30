@@ -1,5 +1,6 @@
-package Model;
+package model;
 
 public enum TransactionType {
-    WIN, BET;
+    WIN,
+    BET;
 }

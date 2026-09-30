@@ -1,7 +1,7 @@
-package Service;
+package service;
 
-import Model.TransactionType;
-import Model.transaction;
+import model.TransactionType;
+import model.transaction;
 
 public class transactionService {
 
