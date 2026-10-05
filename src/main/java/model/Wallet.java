@@ -2,12 +2,12 @@ package model;
 
 import java.math.BigDecimal;
 
-public class wallet {
+public class Wallet {
 
     private final String id;
     private BigDecimal balance;
 
-    public wallet(String id, BigDecimal balance) {
+    public Wallet(String id, BigDecimal balance) {
         this.id = id;
         this.balance = balance;
     }
@@ -15,10 +15,12 @@ public class wallet {
     public String getId() {
         return id;
     }
-    public BigDecimal getAmount() {
+
+    public BigDecimal getBalance() {
         return balance;
     }
-    public void setAmount(BigDecimal balance) {
+
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 }

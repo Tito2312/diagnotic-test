@@ -26,7 +26,7 @@ public class TransactionResult {
         return status;
     }
 
-    public BigDecimal getResultAmount() {
+    public BigDecimal getResultBalance() {
         return resultBalance;
     }
 
