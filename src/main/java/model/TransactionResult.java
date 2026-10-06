@@ -37,4 +37,15 @@ public class TransactionResult {
     public boolean isIndicator() {
         return indicator;
     }
+
+    @Override
+    public String toString() {
+        return "TransactionResult{" +
+                "id='" + id + '\'' +
+                ", status=" + status +
+                ", resultBalance=" + resultBalance +
+                ", description='" + description + '\'' +
+                ", indicator=" + indicator +
+                '}';
+    }
 }
