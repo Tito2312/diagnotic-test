@@ -7,10 +7,9 @@ import model.TransactionType;
 import service.WalletService;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
 
         BigDecimal initalBalance = new BigDecimal("100000");
@@ -25,7 +24,7 @@ public class main {
                 new Transaction("tx-005", TransactionType.WIN, new BigDecimal("10000"))
         );
 
-        List< TransactionResult> results = new ArrayList<>();
+
         int approvedCount = 0;
         int rejectedCount = 0;
         int duplicatedCount = 0;
@@ -35,7 +34,7 @@ public class main {
         for(Transaction transaction : testTransactions) {
 
             TransactionResult result = walletService.processTransaction(transaction);
-            results.add(result);
+
 
             if (result.isIndicator()) {
                 duplicatedCount++;
@@ -45,7 +44,7 @@ public class main {
                 rejectedCount++;
             }
 
-            System.out.println(result.toString());
+            System.out.println(result);
         }
 
         System.out.println("\n=== RESUMEN FINAL ===");
