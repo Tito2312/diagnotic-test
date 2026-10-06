@@ -44,7 +44,11 @@ public class Main {
                 rejectedCount++;
             }
 
-            System.out.println(result);
+            System.out.printf("ID: %-8s | Fecha: %s | Estado: %-8s | Saldo: %-10s%n",
+                    transaction.getId(),
+                    transaction.getDate(),
+                    result.getStatus(),
+                    result.getResultBalance());
         }
 
         System.out.println("\n=== RESUMEN FINAL ===");
