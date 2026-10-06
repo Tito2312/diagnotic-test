@@ -1,50 +1,36 @@
 package model;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Transaction {
 
-    private String id;
-    private TransactionType type;
-    private BigDecimal amount;
-    private Date date;
+    private final String id;
+    private final TransactionType type;
+    private final BigDecimal amount;
+    private final LocalDateTime date;
 
     public Transaction(String id, TransactionType type, BigDecimal amount) {
         this.id = id;
         this.type = type;
         this.amount = amount;
-        this.date = new Date();
+        this.date = LocalDateTime.now();
     }
 
     public String getId() {
         return id;
-    }
-    public void setId(String id) {
-        this.id = id;
     }
 
     public TransactionType getType() {
         return type;
     }
 
-    public void setType(TransactionType type) {
-        this.type = type;
-    }
-
     public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
-
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
 }

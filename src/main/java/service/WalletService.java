@@ -24,10 +24,9 @@ public class WalletService {
         if (processedTransactions.containsKey(transactionId)) {
             TransactionResult originalResult = processedTransactions.get(transactionId);
 
-            return new TransactionResult(
+            return recordResult(
                     originalResult.getId(),
                     originalResult.getStatus(),
-                    originalResult.getResultBalance(),
                     "Transaccion duplicada",
                     true
             );
