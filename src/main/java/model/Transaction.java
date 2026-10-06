@@ -10,7 +10,7 @@ public class Transaction {
     private BigDecimal amount;
     private Date date;
 
-    public Transaction(String id,  TransactionType type, BigDecimal amount) {
+    public Transaction(String id, TransactionType type, BigDecimal amount) {
         this.id = id;
         this.type = type;
         this.amount = amount;

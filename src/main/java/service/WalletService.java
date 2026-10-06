@@ -28,7 +28,7 @@ public class WalletService {
                     originalResult.getId(),
                     originalResult.getStatus(),
                     originalResult.getResultBalance(),
-                    "Transaccion duplicada: "+ originalResult.getDescription(),
+                    "Transaccion duplicada",
                     true
             );
         }
